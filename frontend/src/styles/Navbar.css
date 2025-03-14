@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem; /* Responsive padding */
+  background-color: #fff;
+}
+
+/* Center logo */
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+    height: 4rem; /* Increase height */
+    width: auto; /* Keep aspect ratio */
+    margin-left:8rem; /* Remove unwanted margin */
+  }
+  
+  /* Center logo properly */
+  .logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+
+/* Align icons */
+.menu-icon {
+  font-size: 1.2rem; /* Slightly larger for better visibility */
+  cursor: pointer;
+  margin-left: -0.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.9rem; /* Maintain proportional spacing */
+  align-items: center;
+}
+
+.nav-icon {
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-icon:hover {
+  color: #007bff;
+}
