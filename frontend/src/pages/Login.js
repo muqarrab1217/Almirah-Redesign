@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import bcrypt from "bcryptjs"; // Import bcrypt to compare passwords
+import Navbar from "../components/Navbar"; // Ensure correct path
+import Footer from "../components/Footer"; // Ensure correct path
 import "../styles/Login.css";
 
 const Login = () => {
@@ -54,36 +56,40 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <h2 className="login-title">LOGIN</h2>
+    <>
+      <Navbar />
+      <div className="login-container">
+        <h2 className="login-title">LOGIN</h2>
 
-      <input 
-        type="email" 
-        placeholder="Email" 
-        className="input-field" 
-        value={email} 
-        onChange={(e) => setEmail(e.target.value)} 
-      />
+        <input 
+          type="email" 
+          placeholder="Email" 
+          className="input-field" 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
+        />
 
-      <input 
-        type="password" 
-        placeholder="Password" 
-        className="input-field" 
-        value={password} 
-        onChange={(e) => setPassword(e.target.value)} 
-      />
+        <input 
+          type="password" 
+          placeholder="Password" 
+          className="input-field" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)} 
+        />
 
-      {error && <p className="error-message">{error}</p>}
+        {error && <p className="error-message">{error}</p>}
 
-      <p className="forgot-password">FORGOT YOUR PASSWORD?</p>
+        <p className="forgot-password">FORGOT YOUR PASSWORD?</p>
 
-      <button className="login-button" onClick={handleLogin}>Login</button>
+        <button className="login-button" onClick={handleLogin}>Login</button>
 
-      {/* Link to Signup Page */}
-      <Link to="/signup" className="create-account">
-        <FontAwesomeIcon icon={faUserPlus} className="icon" /> CREATE ACCOUNT
-      </Link>
-    </div>
+        {/* Link to Signup Page */}
+        <Link to="/signup" className="create-account">
+          <FontAwesomeIcon icon={faUserPlus} className="icon" /> CREATE ACCOUNT
+        </Link>
+      </div>
+      <Footer />
+    </>
   );
 };
 

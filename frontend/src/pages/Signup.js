@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../components/Navbar"; // Ensure correct path
+import Footer from "../components/Footer"; // Ensure correct path
 import "../styles/Signup.css";
 
 const Signup = () => {
@@ -36,52 +38,56 @@ const Signup = () => {
   };
 
   return (
-    <div className="signup-container">
-      <h2 className="signup-title">CREATE ACCOUNT</h2>
+    <>
+      <Navbar />
+      <div className="signup-container">
+        <h2 className="signup-title">CREATE ACCOUNT</h2>
 
-      {error && <p className="error-message">{error}</p>}
+        {error && <p className="error-message">{error}</p>}
 
-      <form onSubmit={handleSignup}>
-        <input
-          type="text"
-          placeholder="First Name"
-          className="input-field"
-          value={firstname}
-          onChange={(e) => setFirstname(e.target.value)}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Last Name"
-          className="input-field"
-          value={lastname}
-          onChange={(e) => setLastname(e.target.value)}
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          className="input-field"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="input-field"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+        <form onSubmit={handleSignup}>
+          <input
+            type="text"
+            placeholder="First Name"
+            className="input-field"
+            value={firstname}
+            onChange={(e) => setFirstname(e.target.value)}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            className="input-field"
+            value={lastname}
+            onChange={(e) => setLastname(e.target.value)}
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="input-field"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="input-field"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-        <button type="submit" className="signup-button">Sign Up</button>
-      </form>
+          <button type="submit" className="signup-button">Sign Up</button>
+        </form>
 
-      <Link to="/login" className="create-account">
-        ALREADY HAVE AN ACCOUNT?
-      </Link>
-    </div>
+        <Link to="/login" className="create-account">
+          ALREADY HAVE AN ACCOUNT?
+        </Link>
+      </div>
+      <Footer />
+    </>
   );
 };
 

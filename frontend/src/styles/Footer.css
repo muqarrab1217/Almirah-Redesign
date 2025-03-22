@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica&display=swap');
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 2rem 1rem 1rem; /* Reduced bottom padding */
+  font-family: 'Helvetica', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.6rem;
+}
+.footer-left, .footer-right :hover {
+    color: #007bff;
+  }
+  
+.footer-left :hover {
+    color: #007bff;
+  }
+  
+
+.footer-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 400px;
+  height: auto;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.footer-subscribe {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+}
+
+/* Subscription Form Styling */
+.subscribe-form {
+  position: relative;
+  display: inline-block;
+  width: 260px;
+}
+
+/* Input Field */
+.footer-subscribe input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.4rem 2rem 0.4rem 0.5rem; /* Space for the icon */
+  width: 100%;
+  text-align: left;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.footer-subscribe input:focus {
+  outline: none;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Right Arrow Submit Button */
+.submit-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.submit-icon:hover {
+  color: #007bff;
+}
+
+/* Hide button when input is not focused */
+.submit-icon {
+  display: none;
+}
+
+.subscribe-form input:focus + .submit-icon,
+.subscribe-form input:not(:placeholder-shown) + .submit-icon {
+  display: block;
+}
+
+
+.footer-bottom-container {
+    text-align: center;
+    width: 100%;
+  }
+  
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align content */
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+  
+
+.Copyright {
+  flex: 1;
+  text-align: center; /* Centers the copyright text */
+  font-size: 0.8rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end; /* Moves social icons to extreme right */
+  align-items: center; /* Aligns social icons vertically */
+  flex: 1;
+} 
+
+.footer-social i {
+  font-size: 0.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-social i:hover {
+    color: inherit; /* Reset color to default */
+  }
+  
+  .footer-social .fa-instagram:hover {
+    color: #E4405F; /* Instagram brand color */
+  }
+  
+  .footer-social .fa-facebook:hover {
+    color: #1877F2; /* Facebook brand color */
+  }
+  
+  .footer-social .fa-youtube:hover {
+    color: #FF0000; /* YouTube brand color */
+  }
+  
+  .footer-social .fa-twitter:hover {
+    color: #1DA1F2; /* Twitter brand color */
+  }
+  
+  .footer-subscribe input {
+    background: none;
+    border-bottom: 1px solid white; /* Change border to visible */
+    color: grey;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+    width: 250px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+  }
+
+  
+  .footer-subscribe input:focus {
+    outline: none;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+  }
+  
+.submit-icon{
+  color: white;
+}

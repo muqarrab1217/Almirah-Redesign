@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link for navigation
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faMagnifyingGlass, faUser, faStore } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMagnifyingGlass, faUser, faStore, faShoppingCart } from "@fortawesome/free-solid-svg-icons"; // Added Cart Icon
 import "../styles/Navbar.css"; 
 import logo from "../assets/logo.png"; // Import logo
 
@@ -10,9 +10,11 @@ const Navbar = () => {
     <nav className="navbar">
       <FontAwesomeIcon icon={faBars} className="menu-icon" /> {/* Bars Icon */}
 
-      {/* Center Logo */}
+      {/* Center Logo (Clickable to Home) */}
       <div className="logo-container">
-        <img src={logo} alt="Almirah Logo" className="logo" />
+        <Link to="/"> {/* Link to Home Page */}
+          <img src={logo} alt="Almirah Logo" className="logo" />
+        </Link>
       </div>
 
       {/* Icons */}
@@ -26,7 +28,16 @@ const Navbar = () => {
           </Link>
         </li>
 
+        {/* Link to Cart Page with Cart Icon */}
+        <li>
+          <Link to="/cart" className="nav-link">
+            <FontAwesomeIcon icon={faShoppingCart} className="nav-icon" />
+          </Link>
+        </li>
+
         <li><FontAwesomeIcon icon={faStore} className="nav-icon" /></li> {/* Store Icon */}
+
+        
       </ul>
     </nav>
   );
